@@ -114,6 +114,68 @@ A comparable name-brand kit (MSR + Therm-a-Rest + Osprey + Patagonia) runs $2,50
 - **Trail runners / broken-in boots** — fit trumps price; try on in person (Decathlon shoes are fine if they fit you).
 - **Titanium ultralight cookware** — Decathlon only does stainless/aluminum; TOAKS is the cheap titanium option.
 
+## Product links & pricing
+
+Direct Decathlon product pages. Prices are list prices as of August 2026 (UK £ / US $ depending on which store carries the item); Decathlon runs frequent clearances — the MT100 jacket, for example, has been spotted at $40–75 on sale. Items marked ~ are approximate/regional.
+
+### Shelter
+
+| Product | Price | Link |
+|---|---|---|
+| MT900 Tarp Tent 1P (trekking-pole) | £129.99 | [decathlon.co.uk](https://www.decathlon.co.uk/p/one-person-trekking-ultra-light-and-ultra-compact-tarp-tent-mt900/343262/c193c382m8968612) |
+| MT900 Tarp Tent 2P | ~£160 | [decathlon.co.uk](https://www.decathlon.co.uk/p/two-person-trekking-ultra-light-and-ultra-compact-tarp-tent-mt900/324534/c193c382m8968614) |
+| MT900 Dome 1P | ~£160 | [decathlon.co.uk](https://www.decathlon.co.uk/p/trekking-dome-tent-1-person-mt900/_/R-p-305777) |
+| MT900 Dome 2P | ~£190 | [decathlon.co.uk](https://www.decathlon.co.uk/p/2-person-dome-trekking-tent-lightweight-and-free-standing-mt900/301558/c149m8882674) |
+| MT900 UL Tunnel 2P | £209.99 | [decathlon.co.uk](https://www.decathlon.co.uk/p/2-person-trekking-ultralight-tunnel-tent-mt900-ul/323505/c149m8586318) |
+| MT900 Tunnel 3P | ~£250 | [decathlon.co.uk](https://www.decathlon.co.uk/p/3-person-trekking-tunnel-tent-lightweight-mt900/355081/c396m8882697) |
+
+### Sleep system
+
+| Product | Price | Link |
+|---|---|---|
+| MT900 Down Bag 0°C | £169.99 | [decathlon.co.uk](https://www.decathlon.co.uk/p/0degc-lightweight-compact-down-trekking-sleeping-bag-mt900/355074/c405m8882708) · [decathlon.com (US)](https://www.decathlon.com/products/trekking-sleeping-bag-mt900-0-degrees-celcius-down-309272) |
+| MT900 Down Bag 5°C | ~£130 | [decathlon.co.uk](https://www.decathlon.co.uk/p/5degc-lightweight-compact-down-trekking-sleeping-bag-mt900/346425/c392m8975213) |
+| MT900 Down Bag 10°C | ~£100 | [decathlon.co.uk](https://www.decathlon.co.uk/p/10degc-lightweight-compact-down-trekking-sleeping-bag-mt900/307917/c149c98c344m8575969) · [decathlon.com (US)](https://www.decathlon.com/products/backpacking-sleeping-bag-feather-50-trek-900-307917) |
+| MT900 Inflatable Pad L (R 5.4) | £119.99 | [decathlon.co.uk](https://www.decathlon.co.uk/p/inflatable-insulating-trekking-mattress-size-l-mt900-183-x-54-cm/324574/c153c149m8975202) · [decathlon.com (US)](https://www.decathlon.com/products/inflatable-backpacking-mattress-mt900-air-l-180-x-56-cm-1-person-324590) |
+| MT900 Inflatable Pad XL | £129.99 | [decathlon.co.uk](https://www.decathlon.co.uk/p/trekking-inflatable-mattress-mt900-air-insulator-xl-195-x-63-cm-1-person/_/R-p-324583) |
+| MT500 Air Pad (summer, R 1.5) | ~$60 | [decathlon.com](https://www.decathlon.com/products/forclaz-mt500-air-mattress-189392) · [decathlon.co.uk](https://www.decathlon.co.uk/p/inflatable-trekking-mattress-size-l-mt500-180-x-52-cm/189392/c344c344m8799965) |
+| MT500 Folding Foam Pad (R 2.2) | ~$40 | [decathlon.com](https://www.decathlon.com/products/backpacking-folding-foam-mattress-mt500-insulating-195-x-55-cm-1-person-306340) |
+
+### Packs
+
+| Product | Price | Link |
+|---|---|---|
+| MT900 Symbium 50+10 L men's | ~£170 / $209 | [decathlon.co.uk](https://www.decathlon.co.uk/p/mens-trekking-backpack-50-10l-mt900-symbium/342061/c162c71c392m8751963) |
+| MT900 Symbium2 50+10 L women's | $209 (seen on sale $125) | [decathlon.com](https://www.decathlon.com/products/simond-womens-mt900-symbium2-5010-l-backpacking-pack-342130) · [decathlon.co.uk](https://www.decathlon.co.uk/p/women-s-trekking-backpack-50-10l-mt900-symbium/342130/c33c382m8752034) |
+| MT900 UL 50+10 L (lighter, 1.3 kg) | ~$160 | [decathlon.com](https://www.decathlon.com/products/mens-ultralight-backpacking-backpack-5010-l-mt900-ul-332178) · [decathlon.co.uk](https://www.decathlon.co.uk/p/mens-light-trekking-backpack-mt900-50-10-l-light/332178/c443c246m8642599) |
+
+### Kitchen
+
+| Product | Price | Link |
+|---|---|---|
+| MT500 compact gas stove (85 g, piezo) | ~$30 | [decathlon.com](https://www.decathlon.com/products/backpacking-compact-light-gas-stove-with-piezo-trek-500-310238) · [decathlon.co.uk](https://www.decathlon.co.uk/p/lightweight-and-compact-gas-stove-with-lighter-mt500/_/R-p-310238) |
+| MT500 stainless cookset 1P | ~£25 | [decathlon.co.uk](https://www.decathlon.co.uk/p/trekking-stainless-steel-cookset-mt500-1-person/_/R-p-174672) |
+| Trek 500 1.6 L cookset 2P | ~$35 | [decathlon.com](https://www.decathlon.com/products/backpacking-cook-set-stainless-2-person-trek-500) |
+
+### Clothing
+
+| Product | Price | Link |
+|---|---|---|
+| MT100 hooded down jacket (-5°C) | $119 (sales to $40–75) | [decathlon.com](https://www.decathlon.com/products/simond-mt100-hooded-down-puffer-jacket-167571) · [decathlon.co.uk](https://www.decathlon.co.uk/p/men-s-mountain-trekking-hooded-down-jacket-mt100-5-c/_/R-p-167571) |
+| MT500 hooded down puffer (800 CUIN, to -14°F) | ~$180 | [decathlon.com](https://www.decathlon.com/products/forclaz-mens-mt500-hooded-down-puffer-jacket-331151) |
+| MT500 merino long-sleeve base layer | $50 | [decathlon.com base layers](https://www.decathlon.com/collections/mens-base-layers) |
+| MT500 merino base layer tights | $79.99 | [decathlon.com](https://www.decathlon.com/products/forclaz-trek-500-merino-wool-tights-backpacking-undergarment-301655) |
+
+### Accessories
+
+| Product | Price | Link |
+|---|---|---|
+| HL500 USB headlamp (300 lm, USB-C) | ~£35 | [decathlon.co.uk](https://www.decathlon.co.uk/p/rechargeable-head-torch-300-lumen-hl500-usb-v3-black/_/R-p-339061) · [decathlon.com](https://www.decathlon.com/products/simond-rechargeable-headlamp-300-lumens-hl500-usb-v3-turquoise-339061) |
+| Trek 500 200-lumen headlamp (budget) | ~$25 | [decathlon.com](https://www.decathlon.com/products/forclaz-trek-500-200-lumen-usb-head-lamp-328250) |
+| MT500 hiking pole (sold singly) | ~$35 each | [decathlon.com](https://www.decathlon.com/products/hiking-pole-500) · [decathlon.co.uk](https://www.decathlon.co.uk/p/1-all-season-hiking-pole-mt500-all-season-red/_/R-p-156363) |
+
+Water filters, first-aid kits, dry bags, and survival blankets are in Decathlon's hiking-accessories section — search "water filter" / "trekking first aid" on your regional store, as availability shifts by region more than the core gear above.
+
 ## Sources
 
 - [Live for the Outdoors — MT900 Dome tent review](https://www.livefortheoutdoors.com/camping/tents/decathlon-forclaz-trekking-dome-tent-mt900-review/)
