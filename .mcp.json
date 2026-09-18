@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mac-mini": {
+      "type": "http",
+      "url": "${MAC_MINI_MCP_URL}"
+    }
+  }
+}
