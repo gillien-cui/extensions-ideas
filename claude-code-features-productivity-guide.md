@@ -4,7 +4,7 @@ A map of Claude Code's features (slash commands, hooks, workflows, integrations,
 
 > For the Agent SDK, plugins, MCP servers and connectors, see `claude-code-sdk-plugins-mcp-guide.md`.
 
-> Features change quickly. Run `/help` in your own install to see the exact commands your version has, and check https://code.claude.com/docs for the current reference.
+> **Checked against Claude Code v2.1.292 on 2026-10-07.** Command names come from the CLI's own command list and `claude --help`. Features change quickly, so run `/help` in your own install to see what your version has, and check https://code.claude.com/docs for the current reference.
 
 ---
 
@@ -25,7 +25,7 @@ mindmap
       Slash commands
       @file mentions
       !bash mode
-      # quick memory
+      /btw side questions
       Esc to interrupt / Esc Esc to rewind
       Shift+Tab permission modes
       Images and screenshots
@@ -37,7 +37,8 @@ mindmap
       Resume: --continue, --resume
     Planning and Control
       Plan mode
-      Auto / acceptEdits / bypass modes
+      Auto / acceptEdits / dontAsk / bypass modes
+      /goal stop conditions
       Checkpoints and /rewind
       Todo / task lists
       Effort and thinking levels
@@ -54,22 +55,24 @@ mindmap
     Automation
       Headless: claude -p
       /loop recurring prompts
-      Scheduled routines
-      Background tasks and Monitor
+      /schedule routines
+      Background tasks, /tasks
+      Background sessions: --bg, /fork, /subtask
+      /teleport, /remote-control
       GitHub PR watching and autofix
       Git worktrees for parallel work
     Built-in Workflows
       /code-review
       /security-review
       /simplify
-      /review PR
+      /ultrareview (cloud)
       Commit and PR creation
       /run app and screenshot
     Config and Ops
       settings.json levels
       Permission allow / deny lists
       /fewer-permission-prompts
-      /config, /model, /cost
+      /config, /model, /usage
       /doctor, /bug
       Env vars and setup scripts
 ```
@@ -86,7 +89,7 @@ mindmap
 | `/clear` | Starts with a fresh context | Switching tasks; stops old context from confusing new work |
 | `/compact [focus]` | Summarizes the conversation to free up context | Long sessions; you can tell it what to keep |
 | `/context` | Shows what's using up the context window | Find out why a session is getting slow or forgetful |
-| `/rewind` (or `Esc Esc`) | Goes back to an earlier checkpoint (code and/or chat) | Undo a wrong turn safely |
+| `/rewind` (alias `/checkpoint`, `/undo`; or `Esc Esc`) | Goes back to an earlier checkpoint (code and/or chat) | Undo a wrong turn safely |
 | `/resume` | Picks up a past session | Continue yesterday's work |
 | `/model` | Switches model | Faster model for simple work, stronger model for hard problems |
 | `/config` | Theme, defaults, settings UI | |
@@ -103,12 +106,38 @@ mindmap
 | `/fewer-permission-prompts` | Builds an allowlist from your usage history | Removes the most common interruptions |
 | `/statusline` | Builds a custom status bar (branch, model, cost…) | Useful info always on screen |
 | `/output-style` | Changes the response style (e.g. explanatory, learning) | Learning a new codebase or language |
-| `/cost`, `/usage` | Shows token use, spend, and plan limits | Keep track of usage |
+| `/usage` (alias `/cost`, `/stats`) | Shows session cost, plan usage, and activity stats | Keep track of usage |
 | `/doctor` | Checks your install | When something breaks |
 | `/terminal-setup` | Sets up Shift+Enter for new lines, etc. | One-time quality-of-life fix |
-| `/vim` | Vim keybindings in the prompt | If you use Vim |
+| `/keybindings` | Opens your keyboard shortcuts file | Rebind keys (Vim mode is in `/config`) |
 | `/add-dir` | Adds another directory to the session | Work across several repos together |
 | `/export` | Exports the conversation | Share or archive a session |
+
+### Newer commands worth knowing
+
+| Command | What it does |
+|---|---|
+| `/plan [description]` | Turns on plan mode, or shows the current plan |
+| `/btw <question>` | Asks a quick side question without interrupting the main task |
+| `/goal <condition>` | Sets a goal Claude checks before it stops ("all tests pass") |
+| `/branch [name]` | Branches the conversation at this point to try another approach |
+| `/fork <prompt>` | Copies the conversation into a new background session while you keep working here |
+| `/subtask <task>` | Sends a subagent off with your full context; its result comes back here |
+| `/tasks` | Views and manages everything running in the background |
+| `/background` (`/bg`) | Sends this session to the background and frees the terminal |
+| `/schedule` (`/routines`) | Creates and manages scheduled cloud agents |
+| `/loops` | Lists, creates, and deletes loops |
+| `/teleport` (`/tp`) | Sends this session to the cloud, or resumes one from claude.ai |
+| `/remote-control` (`/rc`) | Controls this session from your phone or claude.ai/code |
+| `/ultraplan`, `/ultrareview` | Plans or reviews your branch with a cloud session that finds and verifies bugs |
+| `/effort`, `/fast` | Sets the reasoning effort level; toggles fast mode |
+| `/advisor` | Lets Claude consult a stronger model at key moments |
+| `/insights`, `/recap` | A report analyzing your sessions; a one-line recap of this one |
+| `/skills`, `/workflows` | Lists available skills; browses running and completed workflows |
+| `/copy [N]`, `/diff` | Copies Claude's last (or Nth) response; shows the diff |
+| `/install-github-app`, `/install-slack-app` | Sets up `@claude` on GitHub or Slack |
+| `/focus` | Focus view: just your prompt, a summary, and the response |
+| `/voice` | Voice input |
 
 **Custom commands:** put a markdown file in `.claude/commands/<name>.md` (shared with the project) or `~/.claude/commands/` (just you), and you can run it as `/<name>`. It accepts `$ARGUMENTS`. This is the easiest way to turn a prompt you keep retyping into one command.
 
@@ -120,12 +149,16 @@ mindmap
 |---|---|
 | `@path/to/file` | Pulls a file or folder into context |
 | `!git status` | Runs a shell command directly; the output goes into context |
-| `# always use pnpm` | Saves a line to memory quickly |
+| "Remember to always use pnpm" | Claude saves it to memory (or edit with `/memory`) |
 | `Shift+Tab` | Cycles permission modes (default → accept edits → plan → auto) |
 | `Esc` | Stops Claude mid-action |
 | `Esc Esc` | Rewind menu |
 | `Ctrl+R` | Searches your prompt history |
 | `Ctrl+B` | Moves a running command to the background |
+| `Ctrl+G` | Opens the prompt in your external editor |
+| `Ctrl+O` | Toggles the full transcript view |
+| `Ctrl+T` | Shows or hides the task list |
+| `Ctrl+S` | Stashes the prompt you're typing |
 | Paste or drag an image | Screenshots of UI bugs, designs, error dialogs |
 | "think" / "think hard" / "ultrathink" | Asks for deeper reasoning on hard problems |
 
@@ -158,14 +191,18 @@ Hooks are shell commands (or prompts) that the harness runs on events, so they r
 | `SessionStart` | Session starts or resumes | Install deps, load environment info (important for cloud sessions) |
 | `SessionEnd` | Session ends | Log or clean up |
 | `PreCompact` | Before context compaction | Save notes or transcripts |
+| `PermissionRequest` | A permission prompt is about to show | Auto-approve or deny with your own rules |
 
-**Example: auto-format after every edit**
+Newer events also exist: `PostToolUseFailure`, `PostToolBatch`, `StopFailure`, `SubagentStart`, `PostCompact`, `UserPromptExpansion`, `PermissionDenied`, `TaskCreated`/`TaskCompleted`, `WorktreeCreate`/`WorktreeRemove`, `FileChanged`, `CwdChanged`, `ConfigChange`, `InstructionsLoaded` and more. See `/hooks` for the full list in your version.
+
+**Example: auto-format after every edit.** A hook gets the tool call as JSON on stdin, so read the file path from `tool_input.file_path`:
 ```json
 {
   "hooks": {
     "PostToolUse": [
       { "matcher": "Edit|Write",
-        "hooks": [{ "type": "command", "command": "npx prettier --write \"$CLAUDE_FILE_PATHS\"" }] }
+        "hooks": [{ "type": "command",
+                    "command": "jq -r '.tool_input.file_path' | xargs npx prettier --write" }] }
     ]
   }
 }
@@ -221,9 +258,13 @@ Claude watches a PR's CI and review comments, pushes fixes, and replies. Combine
 | `--output-format json` / `stream-json` | Parse output in scripts or CI |
 | Pipes | `cat error.log \| claude -p "explain the root cause"` |
 | `claude -c` / `claude -r` | Continue the last session / pick one to resume |
+| `claude --bg "task"` | Starts a background session; manage it with `claude agents`, `attach`, `logs`, `stop` |
+| `claude -w [name]` | Starts in a new git worktree (add `--tmux` for its own pane) |
+| `claude ultrareview` | Cloud multi-agent review of your branch, printed in the terminal |
+| `--max-budget-usd`, `--json-schema` | Spending cap and structured output for scripts |
 | `--allowedTools`, `--permission-mode` | Locked-down automation |
 | GitHub Actions | `anthropics/claude-code-action`: auto-review PRs, fix issues |
-| `/loop`, routines, cron | Recurring checks: deploys, inbox, morning briefs |
+| `/loop`, `/schedule` | Recurring checks: deploys, inbox, morning briefs |
 | Background tasks | Long builds and servers run while you keep chatting |
 | Push notifications | Ping your phone when a long task finishes |
 
@@ -233,7 +274,7 @@ Claude watches a PR's CI and review comments, pushes fixes, and replies. Combine
 
 - **Settings levels:** managed (org) → `~/.claude/settings.json` (user) → `.claude/settings.json` (project, shared) → `.claude/settings.local.json` (personal).
 - **Permissions:** `allow` / `ask` / `deny` rules such as `Bash(npm test:*)` or `Read(./secrets/**)` in deny.
-- **Permission modes:** default, `acceptEdits`, `plan`, `auto` (Claude judges what's risky), `bypassPermissions` (sandbox only).
+- **Permission modes:** `default`, `acceptEdits`, `plan`, `auto` (a classifier judges what's risky), `dontAsk` (deny anything not pre-allowed), `bypassPermissions` (sandbox only).
 - **Env vars:** set in `settings.json` `env`.
 - **Sandboxing:** limits file and network access for safer autonomy.
 
@@ -270,7 +311,7 @@ Claude watches a PR's CI and review comments, pushes fixes, and replies. Combine
 | 12 | `claude -p` in scripts and CI | varies | ★★★ |
 
 ### Suggested 1-week adoption plan
-- **Day 1:** `/init` in your main repo; learn `Shift+Tab`, `Esc Esc`, `@`, `!`.
+- **Day 1:** `/init` in your main repo; learn `Shift+Tab`, `Esc Esc`, `@`, `!`, `/btw`.
 - **Day 2:** Use plan mode for every feature; `/clear` between tasks.
 - **Day 3:** Write 3 custom commands for prompts you repeat.
 - **Day 4:** Add a format hook and a notification hook; run `/fewer-permission-prompts`.

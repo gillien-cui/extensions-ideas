@@ -2,7 +2,7 @@
 
 This is a companion to `claude-code-features-productivity-guide.md`. It covers the parts that extend Claude Code beyond what it does out of the box: the **Agent SDK** for building your own agents, **plugins and skills** you can install, **MCP servers**, and the **connectors** on claude.ai.
 
-> These ecosystems change fast. The names and repos below are the well-known ones as of 2026. Check `/plugin`, `/mcp` and https://code.claude.com/docs before relying on any one of them, and only install servers and plugins from sources you trust, because they run with your permissions.
+> **Checked on 2026-10-07:** the SDK package names against npm and PyPI, and the plugin names against Anthropic's official marketplace (`claude-plugins-official`, 315 plugins). MCP server and connector names are the well-known ones as of 2026 and weren't checked one by one. Check `/plugin`, `/mcp` and https://code.claude.com/docs before relying on any one of them, and only install servers and plugins from sources you trust, because they run with your permissions.
 
 ---
 
@@ -53,8 +53,8 @@ The **Claude Agent SDK** is the engine behind Claude Code packaged as a library.
 
 | | |
 |---|---|
-| TypeScript | `npm install @anthropic-ai/claude-agent-sdk` |
-| Python | `pip install claude-agent-sdk` |
+| TypeScript | `npm install @anthropic-ai/claude-agent-sdk` (0.3.292 at the time of checking) |
+| Python | `pip install claude-agent-sdk` (0.2.164 at the time of checking) |
 | Auth | `ANTHROPIC_API_KEY` (also supports Bedrock, Vertex and similar providers) |
 | Docs | https://docs.claude.com → Agent SDK |
 
@@ -122,11 +122,12 @@ A **plugin** bundles slash commands, subagents, skills, hooks and MCP servers in
 ```
 /plugin                                   # browse and install interactively
 /plugin marketplace add <owner/repo>      # add a marketplace (any git repo with a marketplace.json)
-/plugin install <name>@<marketplace>
+/plugin install <name>@<marketplace>     # e.g. commit-commands@claude-plugins-official
+claude plugin details <name>              # see what it contains and its token cost
 ```
 
 ### Official and well-known plugins
-These come from Anthropic's marketplace and the `anthropics/claude-code` repo. Names may change.
+All of these are in Anthropic's official marketplace (`anthropics/claude-plugins-official`).
 
 | Plugin | What it adds | Good for |
 |---|---|---|
@@ -139,10 +140,16 @@ These come from Anthropic's marketplace and the `anthropics/claude-code` repo. N
 | **frontend-design** | Guidance for distinctive, polished UI | Frontend work |
 | **agent-sdk-dev** | Scaffolding and verification for Agent SDK apps | Starting an SDK project |
 | **plugin-dev** | Tools for writing your own plugins | Building plugins |
-| **explanatory / learning output styles** | Claude explains its choices, or leaves parts for you to write | Learning a codebase or language |
+| **explanatory-output-style / learning-output-style** | Claude explains its choices, or leaves parts for you to write | Learning a codebase or language |
+| **code-simplifier** | Cleans up code after it works | Tidier diffs |
+| **claude-md-management** | Keeps your CLAUDE.md files current | Memory that doesn't go stale |
+| **claude-code-setup** | Recommends hooks, skills and MCP servers for your repo | First-time setup |
+| **ralph-loop** | Runs Claude in a loop until a goal is met | Long autonomous tasks |
+| **LSP plugins** (`typescript-lsp`, `pyright-lsp`, `gopls-lsp`, `rust-analyzer-lsp`…) | Real go-to-definition and type errors for Claude | More accurate edits in big codebases |
+| **skill-creator**, **mcp-server-dev** | Build your own skills and MCP servers | Extending further |
 
 ### Community favorites
-- **obra/superpowers:** a large skills library (TDD, debugging, brainstorming, planning workflows).
+- **superpowers** (by obra, now also in the official marketplace): a large skills library (TDD, debugging, brainstorming, planning workflows).
 - **Agent collections** such as `wshobson/agents`: dozens of ready-made subagents (language experts, DevOps, review).
 - **Team marketplaces:** put your company's commands, agents and hooks in one repo, and everyone gets the same setup with one `marketplace add`.
 
@@ -221,6 +228,8 @@ Scopes: `local` (just you, this project), `project` (`.mcp.json`, committed), `u
 
 ### General-purpose reference servers (`modelcontextprotocol/servers`)
 **Filesystem** (access to dirs outside the project), **Memory** (knowledge graph), **Sequential Thinking**, **Git**, **Time**.
+
+> **Shortcut:** many popular MCP servers are also packaged as plugins in the official marketplace, including `github`, `context7`, `playwright`, `chrome-devtools-mcp`, `sentry`, `linear`, `notion`, `atlassian`, `figma`, `supabase`, `stripe`, `vercel`, `cloudflare`, `firecrawl` and `exa`. `/plugin install context7@claude-plugins-official` sets it up in one step.
 
 > **Tip:** Every MCP server's tool definitions take up context. Enable only what you use in a project (use project-scoped `.mcp.json`), and check `/context` if a session gets sluggish.
 
