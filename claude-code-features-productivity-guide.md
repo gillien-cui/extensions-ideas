@@ -10,71 +10,40 @@ A map of Claude Code's features (slash commands, hooks, workflows, integrations,
 
 ## 1. Mind Map
 
+Read it from the middle out: each branch is a goal, and its leaves are the features that get you there. The details are in the sections below.
+
 ```mermaid
 mindmap
-  root((Claude Code))
-    Surfaces
-      Terminal CLI
-      Desktop app
-      Web / claude.ai/code
-      Mobile app (follow cloud sessions)
-      IDE: VS Code, JetBrains
-      Slack, GitHub Actions
-      Agent SDK (build your own)
-    Interaction
-      Slash commands
-      @file mentions
-      !bash mode
-      /btw side questions
-      Esc to interrupt / Esc Esc to rewind
-      Shift+Tab permission modes
-      Images and screenshots
-    Context and Memory
-      CLAUDE.md project / user / local
-      /init, /memory
-      /compact, /clear, /context
-      Auto-compaction
-      Resume: --continue, --resume
-    Planning and Control
-      Plan mode
-      Auto / acceptEdits / dontAsk / bypass modes
-      /goal stop conditions
-      Checkpoints and /rewind
-      Todo / task lists
-      Effort and thinking levels
-    Extensibility
+  root((Get more done))
+    Set up once
+      CLAUDE.md via /init
       Custom slash commands
-      Skills
-      Subagents (/agents)
-      Hooks
-      MCP servers (/mcp)
-      Plugins and marketplaces
-      Output styles
-      Status line
-      Keybindings
-    Automation
-      Headless: claude -p
-      /loop recurring prompts
-      /schedule routines
-      Background tasks, /tasks
-      Background sessions: --bg, /fork, /subtask
-      /teleport, /remote-control
-      GitHub PR watching and autofix
-      Git worktrees for parallel work
-    Built-in Workflows
-      /code-review
-      /security-review
-      /simplify
-      /ultrareview (cloud)
-      Commit and PR creation
-      /run app and screenshot
-    Config and Ops
-      settings.json levels
-      Permission allow / deny lists
+      Skills for repeat tasks
       /fewer-permission-prompts
-      /config, /model, /usage
-      /doctor, /bug
-      Env vars and setup scripts
+    Get it right first time
+      Plan mode - Shift+Tab
+      /goal - a test to pass
+      /code-review before push
+      Esc Esc to rewind
+    Stay in flow
+      /btw side questions
+      @file and !command
+      Notification hook pings you
+      /clear between tasks
+    Work in parallel
+      Worktrees - claude -w
+      Background - claude --bg
+      /fork and /subtask
+      Cloud sessions from your phone
+    Automate
+      Format hook after edits
+      /loop and /schedule
+      claude -p in scripts
+      GitHub app - @claude
+    Connect your tools
+      MCP servers
+      Plugins
+      Connectors
 ```
 
 ---

@@ -8,41 +8,51 @@ This is a companion to `claude-code-features-productivity-guide.md`. It covers t
 
 ## 1. Mind Map
 
+Each branch is something you might want to do; its leaves are the pieces that do it.
+
 ```mermaid
 mindmap
-  root((Extending Claude Code))
-    Agent SDK
-      TypeScript: @anthropic-ai/claude-agent-sdk
-      Python: claude-agent-sdk
-      query() loop
-      Custom tools as in-process MCP
-      Hooks, subagents, permissions
-      Sessions and resume
-      Use cases: CI bots, support agents, internal tools
-    Plugins
-      /plugin marketplace
-      Official: commit, PR review, feature-dev, security, hookify
-      Output styles: explanatory, learning
-      Community: superpowers, agent collections
-      Your team's own marketplace
-    Skills
-      docx, pdf, pptx, xlsx
-      skill-creator, mcp-builder
-      webapp-testing, frontend-design
-    MCP servers
-      Code: GitHub, GitLab, Sentry
-      Docs: Context7
-      Browser: Playwright, Chrome DevTools
-      Data: Postgres, Supabase, SQLite, BigQuery
-      Work: Linear, Jira/Confluence, Notion, Slack
-      Design: Figma
-      Cloud: Cloudflare, Vercel, AWS, Stripe
-      Search: Brave, Exa, Firecrawl
-    Connectors on claude.ai
-      Gmail, Calendar, Drive
-      GitHub, Slack, Notion, Linear
-      Asana, Atlassian, Figma, Canva
-      Zapier for everything else
+  root((Extend Claude Code))
+    Use an outside tool
+      Connector - Gmail, Drive, Slack
+      MCP server - GitHub, Sentry, DB
+      Context7 for current docs
+      Playwright to test UI
+    Reuse a process
+      Skill - a checklist Claude follows
+      Slash command - a saved prompt
+      Subagent - a focused specialist
+    Share a setup
+      Plugin - bundles all of these
+      Team marketplace repo
+      Project .mcp.json
+    Add guardrails
+      hookify - hooks in plain English
+      security-guidance
+      LSP plugins for type errors
+    Run without me
+      claude -p in scripts and CI
+      Agent SDK - TypeScript or Python
+      claude-code-action on GitHub
+      /schedule routines
+```
+
+### Which one should I use?
+
+```mermaid
+flowchart TD
+  A{"What do you need?"} -->|"Reach an outside app or data"| B{"Listed under Settings, Connectors?"}
+  B -->|Yes| C["Connector"]
+  B -->|No| D["MCP server, or its plugin"]
+  A -->|"Reuse the same instructions"| E{"Should Claude pick it up on its own?"}
+  E -->|Yes| F["Skill"]
+  E -->|"No, I'll type it"| G["Slash command"]
+  A -->|"An expert with its own context"| H["Subagent"]
+  A -->|"Something must happen every time"| I["Hook"]
+  A -->|"Share all of this with others"| J["Plugin"]
+  A -->|"Run with nobody watching"| K{"Inside your own app or service?"}
+  K -->|Yes| L["Agent SDK"]
+  K -->|"No, a script or CI job"| M["claude -p or GitHub Action"]
 ```
 
 ---
