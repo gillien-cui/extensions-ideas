@@ -2,6 +2,8 @@
 
 A map of Claude Code's features (slash commands, hooks, workflows, integrations, and more), grouped so you can pick the ones that save you the most time.
 
+> For the Agent SDK, plugins, MCP servers and connectors, see `claude-code-sdk-plugins-mcp-guide.md`.
+
 > Features change quickly. Run `/help` in your own install to see the exact commands your version has, and check https://code.claude.com/docs for the current reference.
 
 ---
