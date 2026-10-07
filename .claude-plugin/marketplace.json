@@ -1,0 +1,14 @@
+{
+  "name": "extensions-ideas",
+  "description": "Plugins researched and built in the extensions-ideas workspace.",
+  "owner": {
+    "name": "gillien-cui"
+  },
+  "plugins": [
+    {
+      "name": "feature-dev-auto",
+      "source": "./plugins/feature-dev-auto",
+      "description": "Plan once with a human, then build, test, review and summarize a feature unattended with /goal."
+    }
+  ]
+}

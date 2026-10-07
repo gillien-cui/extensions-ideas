@@ -2,6 +2,12 @@
 
 A short brief for the agent building an autonomous "approve the plan once, then run to done" version of the feature-dev workflow.
 
+> **Status: built.** Option A is implemented in [`plugins/feature-dev-auto/`](plugins/feature-dev-auto/README.md). Test results are in [`plugins/feature-dev-auto/TEST-REPORT.md`](plugins/feature-dev-auto/TEST-REPORT.md).
+>
+> Two answers from building it:
+> - **Skills can't start `/goal`.** The official skills docs confirm this, so the approval step is the user pasting the printed `/goal` line.
+> - **The command is now a skill.** It runs as `/feature-dev-auto:plan`, because skills are now the recommended format for plugin commands.
+
 ## 1. What the user wants
 
 - Keep the strengths of Anthropic's `feature-dev` plugin: explore the codebase, ask clarifying questions, compare architectures.

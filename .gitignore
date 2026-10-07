@@ -4,3 +4,4 @@ Thumbs.db
 
 # Claude local state
 .claude/settings.local.json
+plugins/*/evals/results/

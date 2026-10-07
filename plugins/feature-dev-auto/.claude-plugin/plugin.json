@@ -1,0 +1,10 @@
+{
+  "name": "feature-dev-auto",
+  "version": "0.1.0",
+  "description": "Front-loaded feature development: all human input happens in one planning session (questions, architecture, test plan), then a single /goal command implements, tests, reviews and summarizes the feature unattended.",
+  "author": {
+    "name": "gillien-cui"
+  },
+  "license": "Apache-2.0",
+  "keywords": ["feature-development", "autonomous", "goal", "tdd", "test-plan", "code-review"]
+}
