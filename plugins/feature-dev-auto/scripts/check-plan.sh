@@ -36,6 +36,9 @@ check "/goal names the execute skill" sh -c "grep -m1 '^/goal ' \"$plan\" | grep
 check "/goal defines the DONE end state" sh -c "grep -m1 '^/goal ' \"$plan\" | grep -q 'FEATURE-DEV-AUTO STATUS: DONE'"
 check "/goal defines the INCOMPLETE end state" sh -c "grep -m1 '^/goal ' \"$plan\" | grep -q 'FEATURE-DEV-AUTO STATUS: INCOMPLETE'"
 check "/goal sets a turn budget" sh -c "grep -m1 '^/goal ' \"$plan\" | grep -Eq '[0-9]+ turns'"
+goal_file="$(dirname "$plan")/GOAL.md"
+check "GOAL.md exists beside PLAN.md" test -f "$goal_file"
+check "GOAL.md holds the same /goal line as PLAN.md" sh -c "[ \"\$(grep -m1 '^/goal ' \"$goal_file\")\" = \"\$(grep -m1 '^/goal ' \"$plan\")\" ]"
 check "has a run policy" grep -q '^## Run policy' "$plan"
 check "has a baseline" grep -q '^## Baseline' "$plan"
 

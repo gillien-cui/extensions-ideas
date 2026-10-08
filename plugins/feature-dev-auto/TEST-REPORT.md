@@ -20,6 +20,7 @@ Runs used headless `claude -p --plugin-dir plugins/feature-dev-auto` with `--per
 | 8 | Final end-to-end (camelCase): plan, then `/goal` on the final plugin version | Whole workflow, one human hand-off | **Pass**: see below |
 | 9 | v0.2.0 plan run (titleCase, textkit) | Hand-over always shows the test plan and stopping condition; plan checker runs | **Pass**: all 5 hand-over sections present (test plan table with A and R rows, `/goal` block); `check-plan.sh` run until PASS; $0.63 |
 | 10 | v0.2.0 plan run on an Android-style Kotlin app with no tests, no Android SDK and a broken `./gradlew` | A test plan and `/goal` still get produced when the toolchain is missing | **Pass**: 22 acceptance checks runnable on the JVM plus static `grep` checks; Android build, test and lint marked `NOT RUNNABLE HERE` with the SDK setup listed in the run policy; `check-plan.sh` PASS; $1.29 |
+| 11 | v0.3.0: plan run, then a separate "project coordinator" Claude summarizes the thread report, then `/feature-dev-auto:goal` | The `/goal` line survives being passed on | Thread hand-over ends with the exact `/goal` block and GOAL.md matches (checker PASS). **The coordinator summary dropped the line**, which reproduces the user report. `/feature-dev-auto:goal` printed it back exactly. |
 
 ### Run 8 in detail: the final version, end to end
 
@@ -41,6 +42,11 @@ Runs used headless `claude -p --plugin-dir plugins/feature-dev-auto` with `--per
 - `git status` was clean at the end.
 
 ## Fixes made from testing
+
+- **v0.3.0: the user got no `/goal` line.** Run 11 reproduces it: a project's coordinator summarizes each thread's report, and its summary leaves the long line out. *Fix:*
+  - the line is also saved to `docs/plans/<slug>/GOAL.md`, which the checker verifies;
+  - the hand-over now ends with the `/goal` block and includes a "Coordinator: show it exactly as written" note;
+  - a new `/feature-dev-auto:goal` command prints the line from GOAL.md or PLAN.md at any time.
 
 0. **v0.2.0: a user's planning session produced no test plan and no `/goal` stopping condition.** *Fix:*
    - a "Required deliverables" section at the top of the plan skill;

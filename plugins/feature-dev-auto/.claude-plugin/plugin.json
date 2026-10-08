@@ -1,6 +1,6 @@
 {
   "name": "feature-dev-auto",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Front-loaded feature development: all human input happens in one planning session (questions, architecture, test plan), then a single /goal command implements, tests, reviews and summarizes the feature unattended.",
   "author": {
     "name": "gillien-cui"

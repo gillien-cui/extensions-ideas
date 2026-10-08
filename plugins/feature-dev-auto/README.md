@@ -55,6 +55,8 @@ Or load it for one session without installing: `claude --plugin-dir ./plugins/fe
    Answer the single batch of questions, or add `--yes` to let Claude choose and record its assumptions.
 2. Read the hand-over. It always shows the **test plan** table and the **stopping condition** (the `/goal` line), and `scripts/check-plan.sh` has confirmed both are in `docs/plans/<slug>/PLAN.md`. Ask for changes if you want them.
 3. Switch to auto mode (Shift+Tab) and paste the `/goal …` line Claude gives you. That's the approval, and it starts the run.
+   The hand-over always ends with that line, and it's also saved in `docs/plans/<slug>/GOAL.md`.
+   If it ever gets lost, for example because a project coordinator summarized the thread's report, run `/feature-dev-auto:goal` to print it again.
 
    For a terminal or CI, run it headless instead:
    ```bash
@@ -76,7 +78,8 @@ feature-dev-auto/
 ├── .claude-plugin/plugin.json
 ├── skills/
 │   ├── plan/SKILL.md        /feature-dev-auto:plan: all human interaction happens here
-│   └── execute/SKILL.md     run by /goal: build → prove → review → summarize, no questions
+│   ├── execute/SKILL.md     run by /goal: build → prove → review → summarize, no questions
+│   └── goal/SKILL.md        /feature-dev-auto:goal: prints the ready-to-paste /goal line for a plan
 ├── agents/
 │   ├── code-explorer.md     adapted from feature-dev; also discovers test/lint/build commands
 │   ├── code-architect.md    adapted from feature-dev; adds testable build sequence + red-team mode
@@ -92,6 +95,7 @@ Each plan gets its own folder in the target project:
 
 ```
 docs/plans/<slug>/
+├── GOAL.md                  just the /goal line (the stopping condition), ready to paste
 ├── PLAN.md                  scope, decisions, assumptions, run policy, architecture, baseline,
 │                            tasks with proofs, test plan, done condition (/goal line)
 ├── PROGRESS.md              status, base commit, per-task and per-turn log, decisions made while running

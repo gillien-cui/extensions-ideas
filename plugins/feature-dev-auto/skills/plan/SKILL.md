@@ -23,7 +23,8 @@ The planning session isn't finished until all four of these exist. They are the 
    - a regression check (R1),
    - quality checks (Q1…) where the project has lint, typecheck or build.
 3. **A stopping condition.** It goes in the PLAN.md section `## Done condition`: a single `/goal …` line built from the template in Phase 6, which defines both the DONE and the INCOMPLETE end states and a turn budget.
-4. **A hand-over message** (Phase 7) that shows the test plan table and the `/goal` line **in the message itself**, not only in the file.
+4. **`docs/plans/<slug>/GOAL.md`**, a file whose only content is that same `/goal …` line. It lets the user copy the line, or print it with `/feature-dev-auto:goal`, even when a summary of this session leaves it out.
+5. **A hand-over message** (Phase 7) that shows the test plan table and the `/goal` line **in the message itself**, not only in the file. The message must **end** with the `/goal` code block.
 
 Before the hand-over, run the plan checker described in Phase 6 and fix the plan until it passes.
 
@@ -124,6 +125,7 @@ Before writing, check that you have all of these. If one is missing, go back and
 4. Write the `/goal` condition into the plan's `## Done condition` section, using the template below.
    - Keep it under 3,500 characters, on a single line that starts with `/goal `.
    - List the test plan's commands in it by name.
+   - Write the identical line, and nothing else, to `docs/plans/<slug>/GOAL.md`.
 5. **Run the plan checker** and show its output:
    ```
    bash "${CLAUDE_PLUGIN_ROOT}/scripts/check-plan.sh" docs/plans/<slug>/PLAN.md
@@ -132,7 +134,8 @@ Before writing, check that you have all of these. If one is missing, go back and
    - tasks,
    - a test plan with acceptance and regression checks,
    - a run policy and a baseline,
-   - a `/goal` line under 4,000 characters that names the execute skill, defines both end states and sets a turn budget.
+   - a `/goal` line under 4,000 characters that names the execute skill, defines both end states and sets a turn budget,
+   - a `GOAL.md` beside PLAN.md holding exactly the same `/goal` line.
 
    Fix every FAIL line and run it again until the result is `RESULT: PASS`. If the script can't run, go through the same list by hand and say so in the hand-over.
 
@@ -213,26 +216,33 @@ Write the hand-over message with exactly these five headings, in this order. Eve
 <One sentence: the run stops at DONE when every check above passes, review is clean and SUMMARY.md is written; it stops at INCOMPLETE when tasks are blocked or N turns are used. Then the full /goal line in a fenced code block, exactly as in PLAN.md.>
 
 ### Approve
-<The approval wording below.>
+<The approval wording below, then the headless alternative, then the /goal code block again as the very last thing in the message.>
 ```
 
 Word the approval step like this:
 
-> **This is the only approval.** Review the test plan and the stopping condition above. To change anything, tell me now and I'll update the plan. To approve and start the unattended run, switch to auto mode (Shift+Tab) so tool calls don't stop for permission, then paste the `/goal` line above. In a project, paste it into this thread.
+> **This is the only approval.** Review the test plan and the stopping condition above. To change anything, tell me now and I'll update the plan. To approve and start the unattended run, switch to auto mode (Shift+Tab) so tool calls don't stop for permission, then paste the `/goal` line below into this session. In a project, paste it into this thread. The same line is saved in `docs/plans/<slug>/GOAL.md`, and `/feature-dev-auto:goal` prints it again at any time.
 
 After the approval wording, add the headless alternative for a terminal or CI:
 
 ```
-claude -p --permission-mode auto --output-format stream-json --verbose "/goal …"
+claude -p --permission-mode auto --output-format stream-json --verbose "$(cat docs/plans/<slug>/GOAL.md)"
 ```
+
+**End the message with the full `/goal …` line in its own fenced code block.** Nothing comes after it. Ending on it means the line is still visible after a summary or a relay keeps only the end of the message.
+
+**When this session is a thread in a Claude Code project, or a subagent reporting back,** the hand-over message is your report to whoever relays it. Put this line just before the final `/goal` block:
+
+> Coordinator: show the user the `/goal` line below exactly as written, in a code block. Don't summarize it.
 
 Before you send the message, check it yourself:
 - Does it contain a test plan table with at least an A row and an R row?
-- Does it contain a fenced block that starts with `/goal `?
+- Does it end with a fenced block that starts with `/goal `?
+- Does `docs/plans/<slug>/GOAL.md` exist with the same line?
 
-If either is missing, add it. This applies even when the user asked for a short answer.
+If any of these is missing, fix it. This applies even when the user asked for a short answer.
 
 Stop here. Do not start implementing. If the user asks for changes:
-- update PLAN.md and the `/goal` line,
+- update PLAN.md, the `/goal` line and GOAL.md,
 - run the plan checker again,
 - and send the full hand-over again.
