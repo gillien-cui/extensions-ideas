@@ -16,7 +16,7 @@ It's a reworking of Anthropic's [`feature-dev`](https://github.com/anthropics/cl
    3 ONE batch of questions (or --yes)     │     verify: run every test-plan check, show table    │
    4 architecture (code-architect ×2–3)    │     review: code-reviewer ×3 → fix issues ≥80        │
    5 test plan (test-planner)              │     SUMMARY.md + "FEATURE-DEV-AUTO STATUS: DONE"     │
-   6 PLAN.md + red-team review             │                                                     │
+   6 PLAN.md + red-team + plan checker     │                                                     │
    7 hand-over: the only approval ─────────┼──►  /goal evaluator checks the transcript after      │
                                            │     every turn and stops when the condition holds    │
 ───────────────────────────────────────────┘─────────────────────────────────────────────────────┘
@@ -53,7 +53,7 @@ Or load it for one session without installing: `claude --plugin-dir ./plugins/fe
    /feature-dev-auto:plan Add CSV export to the reports page
    ```
    Answer the single batch of questions, or add `--yes` to let Claude choose and record its assumptions.
-2. Read `docs/plans/<slug>/PLAN.md`. Ask for changes if you want them.
+2. Read the hand-over. It always shows the **test plan** table and the **stopping condition** (the `/goal` line), and `scripts/check-plan.sh` has confirmed both are in `docs/plans/<slug>/PLAN.md`. Ask for changes if you want them.
 3. Switch to auto mode (Shift+Tab) and paste the `/goal …` line Claude gives you. That's the approval, and it starts the run.
 
    For a terminal or CI, run it headless instead:
@@ -82,6 +82,8 @@ feature-dev-auto/
 │   ├── code-architect.md    adapted from feature-dev; adds testable build sequence + red-team mode
 │   ├── code-reviewer.md     adapted from feature-dev; reviews a supplied diff, guards test integrity
 │   └── test-planner.md      new: acceptance criteria → runnable checks
+├── scripts/
+│   └── check-plan.sh        validates PLAN.md: tasks, test plan, /goal stopping condition (run before hand-over)
 ├── evals/                   claude plugin eval suite (see Testing)
 └── LICENSE                  Apache-2.0 (agents derived from Anthropic's feature-dev)
 ```

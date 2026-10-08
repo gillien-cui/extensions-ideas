@@ -18,6 +18,8 @@ Runs used headless `claude -p --plugin-dir plugins/feature-dev-auto` with `--per
 | 6 | Impossible plan (needs `npm run lint`, but `package.json` is off-limits) | No fake pass, honest stop | Honest INCOMPLETE, but it only stopped when Claude Code's 9-block safety cap overrode the goal. **Fixed** in run 7. |
 | 7 | Run 6 again with the two-end-state `/goal` template | Clean INCOMPLETE stop | **Pass**: 0 goal re-prompts, no override, `STATUS: INCOMPLETE`, SUMMARY says what a human must do, $0.19 |
 | 8 | Final end-to-end (camelCase): plan, then `/goal` on the final plugin version | Whole workflow, one human hand-off | **Pass**: see below |
+| 9 | v0.2.0 plan run (titleCase, textkit) | Hand-over always shows the test plan and stopping condition; plan checker runs | **Pass**: all 5 hand-over sections present (test plan table with A and R rows, `/goal` block); `check-plan.sh` run until PASS; $0.63 |
+| 10 | v0.2.0 plan run on an Android-style Kotlin app with no tests, no Android SDK and a broken `./gradlew` | A test plan and `/goal` still get produced when the toolchain is missing | **Pass**: 22 acceptance checks runnable on the JVM plus static `grep` checks; Android build, test and lint marked `NOT RUNNABLE HERE` with the SDK setup listed in the run policy; `check-plan.sh` PASS; $1.29 |
 
 ### Run 8 in detail: the final version, end to end
 
@@ -39,6 +41,15 @@ Runs used headless `claude -p --plugin-dir plugins/feature-dev-auto` with `--per
 - `git status` was clean at the end.
 
 ## Fixes made from testing
+
+0. **v0.2.0: a user's planning session produced no test plan and no `/goal` stopping condition.** *Fix:*
+   - a "Required deliverables" section at the top of the plan skill;
+   - a fallback that writes the test plan from the acceptance criteria if the test-planner returns none;
+   - rules for projects whose checks can't run, such as Android without an SDK;
+   - `scripts/check-plan.sh`, which the planner must run until it passes;
+   - a fixed hand-over format that has to show the test plan table and the `/goal` line in the message itself.
+
+   *Verified in runs 9 and 10.*
 
 1. **The planner skipped phases on a small feature.** It skipped the architect and test-planner agents. *Fix:* Phases 2, 4 and 5 and the red-team are now mandatory, scaled down to 1 explorer and 1 architect for changes of about 3 files or fewer. There is also a checklist before PLAN.md is written. *Verified in runs 5 and 8.*
 2. **The planner backgrounded an agent and scheduled a wake-up to wait for it.** *Fix:* Both skills now require `run_in_background: false` on every Agent call and forbid ending a turn to wait. *Verified in runs 5 and 8:* 0 background agents.
