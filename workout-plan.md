@@ -100,8 +100,9 @@ Set from the last session's weight, reps and **Feel** (see the [feel scale](#fee
 |---|---|---|---|
 | Reverse lunge | 20 lb × 12 / leg | 😌 Easy | **25 lb × 12 / leg** (if that's easy too, go for 15) |
 | Goblet squat | 45 lb × 12 | 😤 Hard | **45 lb, aim for 13–14 reps** → 50 lb once you hit 15 on both sets |
-| Push-up (incline) | 3 × 10 | ? | Same angle, aim for 11–12 → lower the angle once you hit 12 on all sets |
-| Face pull | 1 × 10 | ? | 2 × 12–15, light; focus on shoulders down (沉肩) |
+| Push-up (incline) | 3 × 10 | 🙂 Moderate | **Same angle, 3 × 12** → lower the angle once you hit 12 on all sets |
+| Face pull | 10 lb × 10 | 🙂 Moderate (form iffy) | **10 lb, 2 × 12–15**; stay at 10 lb until shoulders-down feels solid |
+| Treadmill | 10 min, incline 8, 3.5 mph | 😌 Easy | 10 min, incline 10 **or** 3.8 mph (change one thing at a time) |
 
 ---
 
@@ -128,10 +129,22 @@ Use `?` if you didn't rate a set.
 | 2026-10-11 | A | Reverse lunge | 2 | 20 lb each hand | 12 / leg | 😌 Easy | |
 | 2026-10-11 | A | Goblet squat | 1 | 45 lb | 12 | 😤 Hard | |
 | 2026-10-11 | A | Goblet squat | 2 | 45 lb | 12 | 😤 Hard | |
-| 2026-10-11 | A | Push-up (incline) | 1 | BW | 10 | ? | |
-| 2026-10-11 | A | Push-up (incline) | 2 | BW | 10 | ? | |
-| 2026-10-11 | A | Push-up (incline) | 3 | BW | 10 | ? | |
-| 2026-10-11 | A | Face pull | 1 | ? | 10 | ? | Hard to feel 沉肩 (shoulders down); upper traps may be helping |
+| 2026-10-11 | A | Push-up (incline) | 1 | BW | 10 | 🙂 Moderate | |
+| 2026-10-11 | A | Push-up (incline) | 2 | BW | 10 | 🙂 Moderate | |
+| 2026-10-11 | A | Push-up (incline) | 3 | BW | 10 | 🙂 Moderate | |
+| 2026-10-11 | A | Face pull | 1 | 10 lb | 10 | 🙂 Moderate | Felt iffy: hard to feel 沉肩 (shoulders down); upper traps may be helping |
+
+### Cardio log
+
+| Date | Activity | Time | Settings | Feel | Notes |
+|---|---|---|---|---|---|
+| 2026-10-11 | Treadmill walk | 10 min | Incline 8, 3.5 mph | 😌 Easy | After the gym session |
+
+### Session notes
+
+| Date | Day | Total time | Notes |
+|---|---|---|---|
+| 2026-10-11 | A | ~60 min | Thorough warm-up, plus extras (lunges, rock-overs, dead hangs, treadmill). Planned work alone is ~30 min. |
 
 ### Climbing log
 
