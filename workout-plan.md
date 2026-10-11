@@ -90,14 +90,27 @@ After each set, write down the weight and how many more reps you think you had l
 
 ---
 
+## Next targets
+
+Updated after each session from the log, using the progression rule.
+
+| Exercise | Last time | Next time |
+|---|---|---|
+| Reverse lunge | 20 lb × 12 / leg, easy | **25 lb × 12 / leg** (if that's easy too, go for 15) |
+| Goblet squat | 45 lb × 12, 1–2 reps left | **45 lb, aim for 13–14 reps** → 50 lb once you hit 15 on both sets |
+| Push-up (incline) | 3 × 10 | Same angle, aim for 11–12 → lower the angle once you hit 12 on all sets |
+| Face pull | 1 × 10 | 2 × 12–15, light; focus on shoulders down (沉肩) |
+
+---
+
 ## Training log
 
 Copy a row per exercise per session. `RIR` = reps in reserve (how many more you could have done).
 
 | Date | Day | Exercise | Weight | Set 1 | Set 2 | Set 3 | RIR | Notes |
 |---|---|---|---|---|---|---|---|---|
-| 2026-10-11 | A | Reverse lunge | 20 lb each hand | 12 / leg | 12 / leg | — | | Extra, not in plan |
-| 2026-10-11 | A | Goblet squat | 45 lb | 12 | 12 | — | | |
+| 2026-10-11 | A | Reverse lunge | 20 lb each hand | 12 / leg | 12 / leg | — | 4+ | Extra, not in plan. Pretty easy → 25 lb next time |
+| 2026-10-11 | A | Goblet squat | 45 lb | 12 | 12 | — | 1–2 | Good effort → same weight, aim for 13–14 |
 | 2026-10-11 | A | Push-up (incline) | BW | 10 | 10 | 10 | | |
 | 2026-10-11 | A | Face pull | | 10 | — | — | | Hard to feel 沉肩 (shoulders down); upper traps may be helping |
 
