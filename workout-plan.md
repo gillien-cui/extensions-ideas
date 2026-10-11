@@ -100,3 +100,12 @@ Copy a row per exercise per session. `RIR` = reps in reserve (how many more you 
 | 2026-10-11 | A | Goblet squat | 45 lb | 12 | 12 | — | | |
 | 2026-10-11 | A | Push-up (incline) | BW | 10 | 10 | 10 | | |
 | 2026-10-11 | A | Face pull | | 10 | — | — | | Hard to feel 沉肩 (shoulders down); upper traps may be helping |
+
+### Climbing log
+
+Climbing-specific drills and hangs, done alongside gym sessions or on their own.
+
+| Date | Drill | Sets × reps / time | Load | Notes |
+|---|---|---|---|---|
+| 2026-10-11 | Rock-over practice | 1 × 15 | BW | After gym session |
+| 2026-10-11 | Dead hang | 2 × 30 s | BW | After gym session |
