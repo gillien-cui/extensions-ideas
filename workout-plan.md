@@ -102,7 +102,7 @@ Set from the last session's weight, reps and **Feel** (see the [feel scale](#fee
 | Goblet squat | 45 lb × 12 | 😤 Hard | **45 lb, aim for 13–14 reps** → 50 lb once you hit 15 on both sets |
 | Push-up (incline) | 3 × 10 | 🙂 Moderate | **Same angle, 3 × 12** → lower the angle once you hit 12 on all sets |
 | Face pull | 10 lb × 10 | 🙂 Moderate (form iffy) | **10 lb, 2 × 12–15**; stay at 10 lb until shoulders-down feels solid |
-| Treadmill | 10 min, incline 8, 3.5 mph | 😌 Easy | 10 min, incline 10 **or** 3.8 mph (change one thing at a time) |
+| Treadmill | 25 min, incline 8, 3.5 mph | 😌 Easy | 25 min, incline 10 **or** 3.8 mph (change one thing at a time) |
 
 ---
 
@@ -138,13 +138,13 @@ Use `?` if you didn't rate a set.
 
 | Date | Activity | Time | Settings | Feel | Notes |
 |---|---|---|---|---|---|
-| 2026-10-11 | Treadmill walk | 10 min | Incline 8, 3.5 mph | 😌 Easy | After the gym session |
+| 2026-10-11 | Treadmill walk | 25 min | Incline 8, 3.5 mph | 😌 Easy | After the gym session |
 
 ### Session notes
 
 | Date | Day | Total time | Notes |
 |---|---|---|---|
-| 2026-10-11 | A | ~60 min | Thorough warm-up, plus extras (lunges, rock-overs, dead hangs, treadmill). Planned work alone is ~30 min. |
+| 2026-10-11 | A | ~75 min | Thorough warm-up, plus extras (lunges, rock-overs, dead hangs, treadmill). Planned work alone is ~30 min. |
 
 ### Climbing log
 
