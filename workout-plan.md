@@ -15,7 +15,7 @@ The goal is the benefits of strength training without overloading the body.
 3. **30 minutes total:** a 5-minute warm-up and about 25 minutes of work.
 4. **Effort:** finish each set with **1–2 reps left in the tank** (about 90% effort, RPE 8–9). Don't go to failure.
 5. **Form first.** If form breaks down, the set is over.
-6. **Log every session:** weight, reps, and how hard it felt.
+6. **Log every set:** weight, reps, and how it felt (see the [feel scale](#feel-scale)).
 7. **Pain ≠ effort.** Stop if anything hurts sharply or in a joint. Muscle burn is fine.
 
 ## 2. Climbing adjustments
@@ -94,31 +94,51 @@ After each set, write down the weight and how many more reps you think you had l
 
 Updated after each session from the log, using the progression rule.
 
-| Exercise | Last time | Next time |
-|---|---|---|
-| Reverse lunge | 20 lb × 12 / leg, easy | **25 lb × 12 / leg** (if that's easy too, go for 15) |
-| Goblet squat | 45 lb × 12, 1–2 reps left | **45 lb, aim for 13–14 reps** → 50 lb once you hit 15 on both sets |
-| Push-up (incline) | 3 × 10 | Same angle, aim for 11–12 → lower the angle once you hit 12 on all sets |
-| Face pull | 1 × 10 | 2 × 12–15, light; focus on shoulders down (沉肩) |
+Set from the last session's weight, reps and **Feel** (see the [feel scale](#feel-scale)).
+
+| Exercise | Last time | Feel | Next time |
+|---|---|---|---|
+| Reverse lunge | 20 lb × 12 / leg | 😌 Easy | **25 lb × 12 / leg** (if that's easy too, go for 15) |
+| Goblet squat | 45 lb × 12 | 😤 Hard | **45 lb, aim for 13–14 reps** → 50 lb once you hit 15 on both sets |
+| Push-up (incline) | 3 × 10 | ? | Same angle, aim for 11–12 → lower the angle once you hit 12 on all sets |
+| Face pull | 1 × 10 | ? | 2 × 12–15, light; focus on shoulders down (沉肩) |
 
 ---
 
 ## Training log
 
-Copy a row per exercise per session. `RIR` = reps in reserve (how many more you could have done).
+**One row per set**, so you can see how each weight felt at each rep count.
 
-| Date | Day | Exercise | Weight | Set 1 | Set 2 | Set 3 | RIR | Notes |
-|---|---|---|---|---|---|---|---|---|
-| 2026-10-11 | A | Reverse lunge | 20 lb each hand | 12 / leg | 12 / leg | — | 4+ | Extra, not in plan. Pretty easy → 25 lb next time |
-| 2026-10-11 | A | Goblet squat | 45 lb | 12 | 12 | — | 1–2 | Good effort → same weight, aim for 13–14 |
-| 2026-10-11 | A | Push-up (incline) | BW | 10 | 10 | 10 | | |
-| 2026-10-11 | A | Face pull | | 10 | — | — | | Hard to feel 沉肩 (shoulders down); upper traps may be helping |
+### Feel scale
+
+Rate each set right after you finish it. Your rating is the number of reps you could still have done (RIR = reps in reserve).
+
+| Feel | Reps left | Meaning | What to do next time |
+|---|---|---|---|
+| 😌 **Easy** | 4+ | Could keep going for a while | Add weight |
+| 🙂 **Moderate** | 3 | Working, but comfortable | Add reps (or weight if at the top of the range) |
+| 😤 **Hard** | 1–2 | Target zone (about 90% effort) | Add 1–2 reps, same weight |
+| 🥵 **Max** | 0 | Couldn't do another rep with good form | Same weight and reps until it feels Hard |
+
+Use `?` if you didn't rate a set.
+
+| Date | Day | Exercise | Set | Weight | Reps | Feel | Notes |
+|---|---|---|---|---|---|---|---|
+| 2026-10-11 | A | Reverse lunge | 1 | 20 lb each hand | 12 / leg | 😌 Easy | Extra, not in plan |
+| 2026-10-11 | A | Reverse lunge | 2 | 20 lb each hand | 12 / leg | 😌 Easy | |
+| 2026-10-11 | A | Goblet squat | 1 | 45 lb | 12 | 😤 Hard | |
+| 2026-10-11 | A | Goblet squat | 2 | 45 lb | 12 | 😤 Hard | |
+| 2026-10-11 | A | Push-up (incline) | 1 | BW | 10 | ? | |
+| 2026-10-11 | A | Push-up (incline) | 2 | BW | 10 | ? | |
+| 2026-10-11 | A | Push-up (incline) | 3 | BW | 10 | ? | |
+| 2026-10-11 | A | Face pull | 1 | ? | 10 | ? | Hard to feel 沉肩 (shoulders down); upper traps may be helping |
 
 ### Climbing log
 
 Climbing-specific drills and hangs, done alongside gym sessions or on their own.
 
-| Date | Drill | Sets × reps / time | Load | Notes |
-|---|---|---|---|---|
-| 2026-10-11 | Rock-over practice | 1 × 15 | BW | After gym session |
-| 2026-10-11 | Dead hang | 2 × 30 s | BW | After gym session |
+| Date | Drill | Set | Reps / time | Load | Feel | Notes |
+|---|---|---|---|---|---|---|
+| 2026-10-11 | Rock-over practice | 1 | 15 | BW | ? | After gym session |
+| 2026-10-11 | Dead hang | 1 | 30 s | BW | ? | After gym session |
+| 2026-10-11 | Dead hang | 2 | 30 s | BW | ? | |
