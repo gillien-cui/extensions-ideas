@@ -28,7 +28,7 @@ ships an `hermes claw migrate` command to import OpenClaw setups.
 | **Chat + do real work in a terminal** | `hermes` opens a terminal UI. The agent can run shell commands, edit files, browse the web and run code. |
 | **Talk to it from your phone** | `hermes gateway setup && hermes gateway start` → message it on Telegram, Discord, Slack, WhatsApp, Signal, Email, Matrix, Teams and others (about 20 platforms). It transcribes voice memos. Conversations carry across platforms. |
 | **Scheduled automations** | Built-in cron, set up in plain language ("every morning at 8, summarise my inbox and send it to Telegram"). Each run starts a fresh agent, can attach skills, and delivers the result to any platform. |
-| **Long-running personal assistant** | It keeps memory about you (`USER.md`) and your environment (`MEMORY.md`) across sessions, and can search all past sessions (SQLite full-text search + LLM summarisation). |
+| **Long-running personal assistant** | It keeps memory about you (`USER.md`) and your environment (`MEMORY.md`) across sessions, and can search all past sessions (SQLite FTS5 keyword search over raw messages, no LLM calls). |
 | **Teach it things** | `/learn <pdf / url / folder>` turns a book, a spec or a docs folder into a knowledge-base skill it can load when needed. |
 | **Reusable workflows** | Every skill is a slash command: `/github-pr-workflow`, `/excalidraw`, and so on. You can stack up to 5 in one message. Skills follow the open **agentskills.io** standard, and there is a public Skills Hub. |
 | **Parallel / delegated work** | It can spawn isolated subagents for parallel work. It can also write Python scripts that call its tools over RPC, so a multi-step pipeline runs in one turn without filling the context. |
