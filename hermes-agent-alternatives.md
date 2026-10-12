@@ -58,8 +58,8 @@ bigger ecosystem and **semantic memory built in**. Hermes has the stronger self-
 |---|---|---|---|---|---|---|
 | Many model providers | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Chat-app gateway | ✅ ~20 | ✅ 20+ | ✗ | ✗ | ≈ via API | ✅ via nodes |
-| Self-written skills | ✅ + curator | ≈ partial | ≈ via memory | ✗ | ✗ | ✗ |
-| Goal loop (until done) | ✅ `/goal` | ≈ | ≈ | ≈ | ✗ | ✗ |
+| Self-written skills | ✅ + curator | ✅ Skill Workshop | ≈ via memory | ✗ | ✗ | ✗ |
+| Goal loop (until done) | ✅ `/goal` | ✅ `/goal` (budgeted) | ≈ | ≈ | ✗ | ✗ |
 | Scheduled jobs | ✅ cron | ✅ cron | ≈ | ≈ | ✗ | ✅ triggers |
 | Multi-agent board/workflow | ✅ Kanban | ≈ | ✅ hierarchy | ≈ recipes | ≈ | ✅ visual |
 | Semantic (embedding) memory | 🔌 plugin | ✅ hybrid | ✅ | ≈ | ✅ | ✅ RAG |
