@@ -124,6 +124,13 @@ self-learning skills and `/goal`.
 | Agent hands off coding to Claude Code | ✅ bundled `claude-code` skill: Hermes runs `claude -p …` (one-shot) or an interactive PTY session from its terminal tool | ✅ `sessions_spawn({ runtime: "acp" })` from the main agent |
 | Billing note | Uses whatever login Claude Code already has | Claude Code keeps its own login. `claude -p` / Agent SDK use counts against your subscription limits; OpenClaw's docs recommend an API key for shared or automated use. |
 
+**Multi-session / multi-agent in one Discord channel (OpenClaw ACP):**
+- `--bind here` routes the channel's *plain messages* to **one** session.
+- `--thread auto` gives **one Discord thread per session**, so one channel can host many sessions, each with its own harness, `--cwd` and `--label`.
+- `/acp spawn … --thread off` starts **unbound background sessions**; you control them by label (`/acp steer --session <label>`, `/acp cancel <key>`, `/acp sessions`).
+- The main OpenClaw agent can call `sessions_spawn({ runtime: "acp", agentId: "claude" | "codex" | … })` several times to fan out to many agents, and results are announced back to the channel or thread.
+- Rebinding a conversation that another user owns is refused.
+
 ## 10. Research / ML angle
 
 Hermes is unique here. It does batch trajectory generation, trajectory compression and RL/eval
