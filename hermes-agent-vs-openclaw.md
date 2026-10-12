@@ -114,6 +114,16 @@ self-learning skills and `/goal`.
 | Memory/skills | Injection scan, write approval | Taint gating, provenance, undo |
 | Watch-outs | Two processes on one `HERMES_HOME` will corrupt memory; small models fake tool calls | Default `tools.sessions.visibility: "all"` (on a shared gateway, agents can search other users' sessions); host execution by default. Read the security guide before exposing the Gateway. |
 
+## 10b. Driving Claude Code (and other coding CLIs) from chat
+
+| | Hermes Agent | OpenClaw |
+|---|---|---|
+| Claude Code as the agent's engine | — | ✅ **CLI backend** `claude-cli`: `openclaw models auth login --provider anthropic --method cli --set-default`. Normal turns (including Discord replies) run through Claude Code; Gateway tools are passed in through a local MCP bridge. Can also be just a fallback. |
+| Claude Code session bound to a chat channel or thread | — | ✅ **ACP agents** (`@openclaw/acpx`): `/acp spawn claude --bind here --cwd /repo` in a Discord channel, or `--thread auto` for a new thread. Also `/acp steer`, `/acp cancel`, `/acp close`, `/acp model`, `/acp permissions`. Sessions are persistent and survive restarts. Also works with Codex, Gemini CLI, OpenCode, Cursor, Copilot, Droid. |
+| Claude Code connects *to* OpenClaw | — | `openclaw mcp serve`: Claude Code uses OpenClaw's channel conversations as MCP tools |
+| Agent hands off coding to Claude Code | ✅ bundled `claude-code` skill: Hermes runs `claude -p …` (one-shot) or an interactive PTY session from its terminal tool | ✅ `sessions_spawn({ runtime: "acp" })` from the main agent |
+| Billing note | Uses whatever login Claude Code already has | Claude Code keeps its own login. `claude -p` / Agent SDK use counts against your subscription limits; OpenClaw's docs recommend an API key for shared or automated use. |
+
 ## 10. Research / ML angle
 
 Hermes is unique here. It does batch trajectory generation, trajectory compression and RL/eval
